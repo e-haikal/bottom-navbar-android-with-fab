@@ -12,7 +12,9 @@
         android:id="@+id/bottomAppBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom">
+        android:layout_gravity="bottom"
+
+        app:contentInsetStartWithNavigation="0dp">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavigationView"
@@ -20,7 +22,8 @@
             android:layout_height="wrap_content"
             app:menu="@menu/bottom_nav_menu"
             android:layout_marginEnd="16dp"
-            android:background="@android:color/transparent"/>
+            app:labelVisibilityMode="labeled"
+            android:background="@color/white"/>
     </com.google.android.material.bottomappbar.BottomAppBar>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -28,5 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_plus"
+        android:backgroundTint="@color/bluegreen"
+        app:tint="@color/white"
         app:layout_anchor="@id/bottomAppBar"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
